@@ -1,11 +1,11 @@
 # wrangler.toml
-name = "ai-daily"
+name = "cloudflare-ai-insight-daily"
 main = "src/index.js" # <-- Important: path to your main worker script
 compatibility_date = "2025-05-20" # Or your project's compatibility date
 workers_dev = true
 
 kv_namespaces = [
-  { binding = "DATA_KV", id = "kv数据库的ID" }
+  { binding = "KV", id = "e911470b0309412c9cb1d37b1e4c84f9" }
 ]
 
 [vars]
