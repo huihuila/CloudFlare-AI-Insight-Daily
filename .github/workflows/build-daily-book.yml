@@ -110,7 +110,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          git add today/ daily/
+          [ -d "today" ] && git add today/ || echo "today/ 不存在，跳过"
+          [ -d "daily" ] && git add daily/ || echo "daily/ 不存在，跳过"
           if [ -f "rss.xml" ]; then
             git add rss.xml
           else
